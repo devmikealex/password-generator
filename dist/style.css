@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace;
+	background: #0a3c00;
+	color: #85ff59;
+	/* font-size: 20px; */
+	padding: 60px;
+}
+
+hr {
+	color: #85ff59;
+}
+
+button {
+	border: 1px solid #85ff59;
+	background-color: #005327;
+	cursor: pointer;
+	color: hsl(104, 100%, 83%);
+	padding: 8px 42px;
+}
+
+button:hover {
+	color: white;
+	background-color: #002602;
+	border-color: #dcffd0;
+}
+
+#button_generate {
+	border: 4px double #85ff59;
+
+}
+
+.center {
+	max-width: 800px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wrapper {
+	border: 4px double #2ba200;
+	background: #072800;
+	padding: 30px;
+}
+
+.title {
+	border: 4px double #8dff63;
+	background: #40d809;
+	color: black;
+	padding: 4px;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+input[type=range] {
+	/* width: 500px; */
+	width: 100%;
+}
+
+.slidecontainer {
+	width: 100%;
+}
+
+#passList {
+	font-size: 1.4rem;
+	display: flex;
+	/* height: 100vh; */
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+#options {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.password_item {
+	margin-bottom: 6px;
+	color: hsl(104, 100%, 83%);
+	background-color: #004520;
+	border: 1px solid #6ad842;
+	padding: 2px 60px;
+}
+
+.password_item:hover {
+	background-color: #1d5300;
+	border-color: #dcffd0;
+}
+
+.password_item button {
+	position: relative;
+	top: -3px;
+	margin-left: 16px;
+	width: 30px;
+	padding: 0;
+}
+
+.stack_horizontal {
+	display: flex;
+	/* flex-direction: row; */
+	/* align-items: center; */
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.flex {
+	display: flex;
+}
