@@ -19,17 +19,11 @@ const lengthView = document.getElementById('length_view')
 const quantityView = document.getElementById('quantity_view')
 
 const len = document.getElementById('length') as HTMLInputElement
-// len.addEventListener('change', () => {
-//     generatePass()
-// })
 len.addEventListener('input', () => {
     generatePass()
 })
 
 const quan = document.getElementById('quantity') as HTMLInputElement
-// quan.addEventListener('change', () => {
-//     generatePass()
-// })
 quan.addEventListener('input', () => {
     generatePass()
 })
@@ -37,8 +31,6 @@ quan.addEventListener('input', () => {
 generatePass()
 
 function generatePass() {
-    passList!.innerHTML = ''
-
     const passLength = parseInt(len?.value ?? '15')
     const passQuantity = parseInt(quan?.value ?? '6')
 
@@ -57,6 +49,13 @@ function generatePass() {
         charSet += charSetLatin
     }
 
+    passList!.innerHTML = ''
+
+    const divCharSet = document.createElement('div')
+    divCharSet.className = 'charset_item'
+    divCharSet.textContent = charSet
+    passList?.append(divCharSet)
+
     for (let index = 0; index < passQuantity; index++) {
         const newPass = passGen(passLength, charSet)
 
@@ -65,9 +64,15 @@ function generatePass() {
         newDiv.textContent = newPass
         passList?.append(newDiv)
 
+        const icon = document.createElement('img')
+        icon.src = './assets/clipboard.svg'
+        icon.width = 26
+        icon.height = 26
+
         const copyButton = document.createElement('button')
-        // copyButton.className = '-'
-        copyButton.textContent = 'C'
+        copyButton.className = 'copyButton'
+        // copyButton.textContent = ''
+        copyButton.append(icon)
         copyButton.onclick = function () {
             navigator.clipboard.writeText(newPass)
         }

@@ -1,7 +1,7 @@
 export function passGen(length: number, charSet: string = ''): string {
     console.log('🚀 charSet', charSet)
 
-    if (charSet === '') return '0000'
+    if (charSet === '') return '****'
 
     let newPass = ''
     for (let index = 0; index < length; index++) {
