@@ -45,7 +45,7 @@ function generatePass() {
     passList.innerHTML = '';
     const divCharSet = document.createElement('div');
     divCharSet.className = 'charset_item';
-    divCharSet.textContent = charSet;
+    divCharSet.textContent = 'Character set: ' + charSet;
     passList === null || passList === void 0 ? void 0 : passList.append(divCharSet);
     for (let index = 0; index < passQuantity; index++) {
         const newPass = passGen(passLength, charSet);
