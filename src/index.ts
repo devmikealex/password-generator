@@ -53,7 +53,7 @@ function generatePass() {
 
     const divCharSet = document.createElement('div')
     divCharSet.className = 'charset_item'
-    divCharSet.textContent = charSet
+    divCharSet.textContent = 'Character set: ' + charSet
     passList?.append(divCharSet)
 
     for (let index = 0; index < passQuantity; index++) {
