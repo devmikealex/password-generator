@@ -1,7 +1,7 @@
 export function passGen(length, charSet = '') {
     console.log('🚀 charSet', charSet);
     if (charSet === '')
-        return '0000';
+        return '****';
     let newPass = '';
     for (let index = 0; index < length; index++) {
         newPass += getRandomChar(charSet);

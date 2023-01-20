@@ -14,23 +14,16 @@ buttonGenerate.onclick = () => {
 const lengthView = document.getElementById('length_view');
 const quantityView = document.getElementById('quantity_view');
 const len = document.getElementById('length');
-// len.addEventListener('change', () => {
-//     generatePass()
-// })
 len.addEventListener('input', () => {
     generatePass();
 });
 const quan = document.getElementById('quantity');
-// quan.addEventListener('change', () => {
-//     generatePass()
-// })
 quan.addEventListener('input', () => {
     generatePass();
 });
 generatePass();
 function generatePass() {
     var _a, _b;
-    passList.innerHTML = '';
     const passLength = parseInt((_a = len === null || len === void 0 ? void 0 : len.value) !== null && _a !== void 0 ? _a : '15');
     const passQuantity = parseInt((_b = quan === null || quan === void 0 ? void 0 : quan.value) !== null && _b !== void 0 ? _b : '6');
     lengthView.textContent = passLength.toString();
@@ -49,15 +42,25 @@ function generatePass() {
         opt_letters.checked = true;
         charSet += charSetLatin;
     }
+    passList.innerHTML = '';
+    const divCharSet = document.createElement('div');
+    divCharSet.className = 'charset_item';
+    divCharSet.textContent = charSet;
+    passList === null || passList === void 0 ? void 0 : passList.append(divCharSet);
     for (let index = 0; index < passQuantity; index++) {
         const newPass = passGen(passLength, charSet);
         const newDiv = document.createElement('div');
         newDiv.className = 'password_item';
         newDiv.textContent = newPass;
         passList === null || passList === void 0 ? void 0 : passList.append(newDiv);
+        const icon = document.createElement('img');
+        icon.src = './assets/clipboard.svg';
+        icon.width = 26;
+        icon.height = 26;
         const copyButton = document.createElement('button');
-        // copyButton.className = '-'
-        copyButton.textContent = 'C';
+        copyButton.className = 'copyButton';
+        // copyButton.textContent = ''
+        copyButton.append(icon);
         copyButton.onclick = function () {
             navigator.clipboard.writeText(newPass);
         };
