@@ -5,9 +5,27 @@
     "main": "index.js",
     "scripts": {
         "start": "",
-        "w": "tsc --watch"
+        "ts:watch": "tsc --watch",
+        "wp:dev:watch": "webpack serve --hot --open --mode=development",
+        "wp:dev:build": "webpack --mode=development",
+        "wp:prd:build": "webpack --mode=production",
+        "sass:watch": "sass --no-source-map --watch ./public/sass/style.scss ./dist/style.css"
     },
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "devDependencies": {
+        "css-loader": "^6.7.3",
+        "css-minimizer-webpack-plugin": "^4.2.2",
+        "html-loader": "^4.2.0",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.7.2",
+        "sass": "^1.57.1",
+        "sass-loader": "^13.2.0",
+        "style-loader": "^3.3.1",
+        "ts-loader": "^9.4.2",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1",
+        "webpack-dev-server": "^4.11.1"
+    }
 }

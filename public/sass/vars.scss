@@ -1,0 +1,7 @@
+$lightGreen: #85ff59;
+// $darkGreen: #0a3c00;
+$darkGreen: darken($lightGreen, 56%);
+
+@mixin borderDouble ($color) {
+	border: 4px double $color;
+}

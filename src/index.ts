@@ -1,4 +1,10 @@
-import { passGen } from './passGen.js'
+import '../public/assets/clipboard.svg'
+
+import '../public/index.html'
+// import '../public/style.css'
+import '../public/sass/style.scss'
+
+import { passGen } from './passGen'
 
 const passList = document.getElementById('passList')
 

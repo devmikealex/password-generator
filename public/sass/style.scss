@@ -1,0 +1,142 @@
+@import "vars.scss";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Mono', 'Ubuntu Mono', 'Courier New', Courier, monospace;
+	// background: #0a3c00;
+	background: $darkGreen;
+	color: $lightGreen;
+	// font-size: 20px;
+	padding: 60px;
+}
+
+hr {
+	color: $lightGreen;
+}
+
+input[type=range] {
+	width: 100%;
+}
+
+button {
+	border: 1px solid $lightGreen;
+	background-color: #005327;
+	cursor: pointer;
+	color: #a7ff87;
+	padding: 8px 42px;
+	&:hover {
+		color: white;
+		background-color: #002602;
+		border-color: #dcffd0;
+	}
+}
+
+#button_generate {
+	// border: 4px double $lightGreen;
+	@include borderDouble ($lightGreen);
+	&:hover {
+		border-color: #dcffd0;
+	}
+}
+
+.center {
+	max-width: 800px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.wrapper {
+	// border: 4px double #2ba200;
+	@include borderDouble (#2ba200);
+	background: #072800;
+	padding: 30px;
+}
+
+.title {
+	// border: 4px double #8dff63;
+	@include borderDouble (#8dff63);
+	// background: #40d809;
+	background: darken($lightGreen, 24%);;
+	color: black;
+	padding: 4px;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+.slidecontainer {
+	width: 100%;
+}
+
+#passList {
+	font-size: 1.4rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 15px;
+}
+
+#options {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.password_item {
+	margin-bottom: 6px;
+	// color: #bfffa8;
+	color: lighten($color: $lightGreen, $amount: 10);
+	background-color: #004520;
+	border: 1px solid #6ad842;
+	padding: 2px 60px;
+	&:hover {
+		background-color: #1d5300;
+		border-color: #dcffd0;
+	}
+}
+
+.stack_horizontal {
+	display: flex;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.flex {
+	display: flex;
+}
+
+.charset_item {
+	// color: #319b0a;
+	color: darken($lightGreen, 40%);
+	font-size: 1rem;
+	margin-bottom: 15px;
+	word-wrap: anywhere;
+	text-align: center;
+	padding: 0 80px;
+}
+
+.copyButton {
+	position: relative;
+	top: 4px;
+	margin-left: 16px;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	opacity: 0.5;
+	// filter: invert(1);
+	&:hover {
+		opacity: 1;
+		background-color: transparent;
+	}
+	img {
+		display: block;
+	}
+}
+
+// Slider
+// Style Input Range - CSS Portal
+// https://www.cssportal.com/style-input-range/

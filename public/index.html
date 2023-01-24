@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PassGEN</title>
+	<!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body>
+	<div class="center">
+		<div class="title">..: Password Generator :..</div>
+		<div class="wrapper">
+			<div id="options">
+				<div class="slidecontainer">
+					<label for="length">Length:</label>
+					<span id="length_view">*</span>
+					<input type="range" id="length" value="12" min="3" max="30">
+				</div>
+				<div class="slidecontainer">
+					<label for="quantity">Quantity:</label>
+					<span id="quantity_view">*</span>
+					<input type="range" id="quantity" value="5" min="1" max="30">
+				</div>
+				<div class="stack_horizontal">
+					<div class="flex">
+						<input type="checkbox" id="opt_letters" checked>
+						<label for="opt_letters">Letters</label>
+					</div>
+					<div class="flex">
+						<input type="checkbox" id="opt_letters_big">
+						<label for="opt_letters_big">Big</label>
+					</div>
+					<div class="flex">
+						<input type="checkbox" id="opt_numbers" checked>
+						<label for="opt_numbers">Numbers</label>
+					</div>
+					<div class="flex">
+						<input type="checkbox" id="opt_spec_symbols">
+						<label for="opt_spec_symbols">Special symbols</label>
+					</div>
+				</div>
+				<button id="button_generate">Generate</button>
+			</div>
+			<hr />
+			<div id="passList"></div>
+		</div>
+	</div>
+
+	<!-- <script type="module" src="./index.js"></script> -->
+	<!-- <script src="./bundle.js"></script> -->
+</body>
+
+</html>
